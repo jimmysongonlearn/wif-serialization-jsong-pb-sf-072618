@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="1" name="pytest" skips="0" tests="1" time="0.474"><testcase classname="test.index_test.PrivateKeyTest" file="test/index_test.py" line="5" name="test_wif" time="0.07915806770324707"><failure message="AssertionError: &apos;KxBg3zhNPXg5qs3LfCHB6YPndGf4PiB1QHYTyEgXsGNQKSmuxZgE&apos; != &apos;L5oLkpV3aqBJ4BgssVAsax1iRa77G5CVYnv9adQ6Z87te7TyUdSC&apos;
+- KxBg3zhNPXg5qs3LfCHB6YPndGf4PiB1QHYTyEgXsGNQKSmuxZgE
++ L5oLkpV3aqBJ4BgssVAsax1iRa77G5CVYnv9adQ6Z87te7TyUdSC">self = &lt;index_test.PrivateKeyTest testMethod=test_wif&gt;
+
+    def test_wif(self):
+        pk = PrivateKey(2**256-2**199)
+        expected = &apos;L5oLkpV3aqBJ4BgssVAsax1iRa77G5CVYnv9adQ6Z87te7TyUdSC&apos;
+&gt;       self.assertEqual(pk.wif(compressed=True, testnet=False), expected)
+E       AssertionError: &apos;KxBg3zhNPXg5qs3LfCHB6YPndGf4PiB1QHYTyEgXsGNQKSmuxZgE&apos; != &apos;L5oLkpV3aqBJ4BgssVAsax1iRa77G5CVYnv9adQ6Z87te7TyUdSC&apos;
+E       - KxBg3zhNPXg5qs3LfCHB6YPndGf4PiB1QHYTyEgXsGNQKSmuxZgE
+E       + L5oLkpV3aqBJ4BgssVAsax1iRa77G5CVYnv9adQ6Z87te7TyUdSC
+
+test/index_test.py:9: AssertionError</failure></testcase></testsuite>
